@@ -154,18 +154,32 @@ boby {
   opacity: 0;
   transform: translateX(50%);
 }
+/* 定位基準點[外面的大盒子]*/
 .box {
-  width: 100px;
+  width: 100px; /*定義100*100像素的正方形*/
   height: 100px;
   background-color: #42b426;
-  position: relative;
+  position: relative; /*最重要的屬性【相對定位】，不會改變盒子的外觀，但會針對內部所有設定*/
 }
+/* 裡面的小盒子，置中 */
 .box-center {
   display: inline-block;
   background-color: #fd345f;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /*移動的意思，()他自己的寬度和高度*/
   font-size: 0.5rem;
+}
+* {
+  box-sizing: border-box;
+}
+.flex-box {
+  border: 1px solid #fd345f;
+  display: flex;
+  width: 400px;
+  height: 400px;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
