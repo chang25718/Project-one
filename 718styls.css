@@ -1,5 +1,20 @@
 .header {
   background-color: rgb(140, 199, 134);
 }
+
 div {
+}
+* {
+  font-size: 1.5rem;
+}
+
+.red-text,
+.red {
+  color: red;
+}
+.blue-text {
+  color: blue;
+}
+.green.green-text {
+  color: green;
 }
