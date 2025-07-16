@@ -1,8 +1,156 @@
 .header {
-  background-color: rgb(207, 192, 174);
+  background-color: rgb(226, 185, 136);
 }
 #id {
 }
-div {
-  background-color: rgb(196, 201, 201);
+/*div {
+  background-color: rgb(234, 222, 212);
+}*/
+* {
+  font-size: 1rem;
+}
+.red,
+.red-text {
+  color: red;
+}
+/*有逗號是or 任選其一*/
+.blue-text,
+.blue {
+  color: blue;
+}
+.green.green-text {
+  color: green;
+}
+/*沒逗號是and 都要放*/
+#pink {
+  color: pink;
+}
+.my-btn {
+  display: flex; /*將父層容器設定為彈性盒子 (display: flex)*/
+  align-items: center; /* 垂直置中 */
+  justify-content: center; /* (可選) 水平置中 */
+
+  background-color: rgb(169, 174, 160); /*背景*/
+  /*background-image: url(new-icon.png);
+
+  background-repeat: no-repeat;
+  background-position: center;*/
+
+  background: url(new-icon.png) no-repeat center; /*組合技*/
+  background-size: 60px;
+  /*vertical-align: middle; /*文字垂直居中*/
+  /* text-align: center; /*文字水平置中*/
+
+  font-size: 1rem;
+  color: #d0b56c;
+  padding: 5px; /*內距 上右下左*/
+  /*padding-top: 15px;*/
+  margin: 15px; /*外距*/
+  border-radius: 60px; /*圓角*/
+  border: 3px solid #635547; /*外框線*/
+  font-weight: bold; /*字體粗細*/
+  width: 60px; /*寬度*/
+  height: 60px; /*高度*/
+  /*box-shadow: 2px 2px 2px 2px rgb(136, 132, 132); /*陰影*/
+}
+.my-btn:hover {
+  /*偽類元素-鼠標移動*/
+  background-size: 100px;
+  border: 5px solid #b7722e; /*外框線*/
+  color: #8a5417;
+}
+.my-btn:active {
+  /*偽類元素-滑鼠點擊*/
+  background-size: 500px;
+  background-color: rgb(0, 0, 0); /*背景*/
+  border: 3px solid #635547; /*外框線*/
+}
+
+.my-message {
+  padding: 10px;
+  font-size: 1.5rem;
+  border: #635547 solid 2px;
+  border-radius: 10px;
+  background-color: cadetblue;
+  color: black;
+  display: inline-block;
+  /*position: absolute; /*從頁面的絕對位置來計算*/
+  /*position: relative; /*相對位置*/
+  position: fixed; /*會跟著滾輪目前頁面位置來計算*/
+  top: 650px;
+  right: 10px;
+  transform: rotate(30deg); /*外觀變化*/
+  translate: -10px;
+}
+.my-message:after {
+  content: "100"; /*用attr(data-count)可以透過js抓到即時數字*/
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  font-size: 0.8rem;
+  color: rgb(198, 17, 17);
+}
+
+.my-message:hover {
+  padding: 15px 20px;
+  transition: all 0.5s ease-in-out; /*監聽變化 加入動畫 速率*/
+}
+
+.my-message.move {
+  right: 40%;
+  opacity: 0;
+  background-color: rgb(229, 11, 0);
+  transform: translateX(50%) rotate(180deg);
+  transition: all 2s ease-in-out; /*監聽變化 加入動畫 速率*/
+}
+
+.box {
+  padding: 10px;
+  font-size: 1.5rem;
+  border: #6d6b69 solid 2px;
+  border-radius: 5px;
+  background-color: rgb(50, 76, 77);
+  color: black;
+  width: 150px; /*寬度*/
+  height: 150px; /*高度*/
+  display: inline-block;
+  position: relative;
+  overflow: auto; /*超出範圍的話如何展現 ex滾輪*/
+}
+
+.box-center {
+  padding: 5px;
+  position: absolute;
+  font-size: 0.8rem;
+  border: #393938 solid 2px;
+  border-radius: 10px;
+  background-color: rgb(178, 199, 200);
+  color: black;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+  transform: translate(-50%, -50%);
+}
+.n {
+  width: 0px;
+  height: 0px;
+  border: #393938 solid 25px;
+  border-color: transparent transparent transparent #a97b31;
+}
+
+* {
+  box-sizing: border-box; /*一個能夠建立準確尺寸的盒子 不受內距干擾*/
+}
+
+.flex-box {
+  display: flex;
+  font-size: 1.5rem;
+  border: #a87038 solid 2px;
+  border-radius: 5px;
+  background-color: rgb(12, 20, 20);
+  color: rgb(165, 146, 146);
+  width: 200px; /*寬度*/
+  height: 200px; /*高度*/
+  justify-content: space-around;
+  align-items: center;
 }
