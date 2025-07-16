@@ -1,7 +1,13 @@
-#id {
-}
 .header {
   background-color: rgb(255, 17, 17);
 }
-div {
+* {
+  font-size: 1.5rem;
+}
+.red-text,
+.red {
+  color: rgb(225, 58, 116);
+}
+.blue-text {
+  color: blue;
 }
